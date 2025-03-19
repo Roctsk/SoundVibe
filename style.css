@@ -1,0 +1,43 @@
+.musicc {
+    width: 500px;
+    position: absolute;
+    right: 200px;
+    top: 90px; 
+}
+.header{
+    background-color: black;
+    padding:20px;
+}
+
+.gen{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-size:25px;
+    padding:0px;
+    justify-content: flex-end;
+}
+
+.txt{
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.start{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
