@@ -1,10 +1,12 @@
 body {
     margin: 0;
     font-family: cursive;
+    background-color: darkseagreen;
 }
 
 .header {
-    background-color: black;
+    border-top: 2px solid #fff;
+    background-color: #191919;
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     display: flex;
@@ -14,6 +16,28 @@ body {
     margin: 0 auto;
     max-width: 2060px;
     font-family: cursive;
+}
+
+.header .menu a::after{
+  content: "";
+  display: block;
+  border-bottom: 3px solid white;
+  width: 100px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s linear;
+  margin-top: 4px;
+}
+
+.header .menu a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.6s linear;
+}
+
+a[href="#reviews"] {
+  color: white;
+  text-decoration: none;
 }
 
 .SoundVibe {
@@ -33,7 +57,7 @@ body {
 
 
 .teg_p {
-    background-color: green;
+    background-color: darkseagreen;
     color: white;
     border-radius: 25px;
     padding: 8px 20px;
@@ -43,7 +67,7 @@ body {
 }
 
 .teg_p:hover {
-    background-color: darkgreen;
+    background-color:  #2E8B57;
 }
 
 .top_music {
@@ -73,19 +97,57 @@ body {
 }
 
 .musicc {
-    width: 500px;  
-    height: auto;
-    margin-top: -100px; 
-    margin-right:250px;
-    filter: drop-shadow(0px 0px 1000px red);
+  width: 500px;
+  height: auto;
+  margin-top: -100px;
+  margin-right: 250px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInUp 1.5s ease-out forwards;
+  filter: drop-shadow(0px 50px 200px rgba(0, 0, 0, 0.9));
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(-250px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 
-.audio {
-    color: white;
-    border-radius: 8px; 
-    padding: 10px; 
-    margin-top: 100px;
+.audi {
+  color: white;
+  border-radius: 8px; 
+  align-items: center;
+  padding: 10px; 
+  width: 100%;
+  opacity: 0;
+  position: relative;
+  left: -50px; 
+  animation: fadeInUpLeft 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUpLeft {
+  0% {
+      opacity: 0;
+      left: -250px;
+  }
+  100% {
+      opacity: 1;
+      left: 0;
+  }
+}
+  
+  
+
+
+.audi audio {
+  width: 100%;
+  height: 50px;
 }
 
 
@@ -95,14 +157,82 @@ body {
 }
 
 .top_hits{
-    width: 300px;
+    width: 100%;
     height: auto;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUps 1.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInUps {
+    0% {
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  
+  
+
+.music_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; 
+  background: #191919;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  margin: auto; 
 }
 
+.top_hitss {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px; 
+}
 
+.audis {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+.audis audio {
+  width: 100%;
+}
 
+.gen_music{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 175px; 
+  margin-bottom: 60px;
+}
 
+.mo_zits{
+  color: #FFFFFF;
+  font-size: 25px;
+  margin-top: -45px;
+  text-decoration: none;
+}
+
+.gener {
+  max-width: 500px;
+  padding: 20px;
+  margin-right: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+}
 
 
 
@@ -308,13 +438,11 @@ footer .containersss button {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* При наведенні курсору на кнопку */
 footer .containersss button:hover {
   transform: scale(1.2);
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.9);
 }
 
-/* При натисканні кнопки */
 footer .containersss button:active {
   background-color: #d3d3d3; 
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
