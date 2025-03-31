@@ -28,16 +28,28 @@
 
         <div class="start">
 
-            <div class="gener">
-              <img src="img/top_hit.jpg" class="top_hits">
+            <div class="gener" >
+              <img src="img/top_hit.jpg" class="top_hits" >
 
-          
               <div class="audi">
                   <audio controls>
                       <source src="music_mp3/song.mp3" type="audio/mpeg">
                   </audio>
               </div>
             </div>
+
+<div id="musicModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Крута пісня</h2>
+      <img src="img/top_hit.jpg" class="modal-image">
+      <p>Назва пісні: Some Song</p>
+      <p>Виконавець: Some Artist</p>
+      <audio controls>
+          <source src="music_mp3/song.mp3" type="audio/mpeg">
+      </audio>
+  </div>
+</div>
             <!--
             <div class="song-details">
                 <p class="txt">
@@ -49,10 +61,16 @@
           -->
         </div>
     </div>
+
+    <hr style="border: none; height: 2px; background-color: white;">
   <div class="ux_main">
       <div class="start">
-         <p style="font-size: 100px;">Коротко про нас
-         </p>
+        <div class="short_about_us">
+          <p style="font-size: 100px;">Коротко про нас</p>
+        </div>
+
+    <hr style="border: none; height: 2px; background-color: white;">
+
         <div class="gen_music">
 
           <div class="music_container">
