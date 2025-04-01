@@ -3,174 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Login Register Form</title>
+    <title>Login/Register Form</title>
+    <link rel="stylesheet" href="style_2.css" />
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="assets/logo.png" alt="logo" />
-        <a href="">Angelo</a>
+    <div class="container" id="container">
+      <!-- Register Form -->
+      <div class="form-container register-container">
+        <form action="#">
+          <h1>Register</h1>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Register</button>
+          <span>or use your account</span>
+          <div class="social-container">
+            <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a href="#" class="social"><i class="lni lni-google"></i></a>
+            <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+          </div>
+        </form>
       </div>
 
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Service</a>
-        <button id="login-button" onclick="{popup(event)}">
-          <span>Login</span>
-        </button>
-      </nav>
-
-      <div class="hamburger-menu">
-        <svg
-          width="35px"
-          height="35px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 18L20 18"
-            stroke="#ffffff"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M4 12L20 12"
-            stroke="#ffffff"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M4 6L20 6"
-            stroke="#ffffff"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
+      <!-- Login Form -->
+      <div class="form-container login-container">
+        <form action="#">
+          <h1>Login Here</h1>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <button type="submit">Login</button>
+          <span>or use your account</span>
+          <div class="social-container">
+            <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a href="#" class="social"><i class="lni lni-google"></i></a>
+            <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+          </div>
+        </form>
       </div>
-    </header>
 
-    <section class="container">
-      <div class="wrapper">
-        <span class="icon-close" onclick="{popup(event)}"
-          ><ion-icon name="close-outline"></ion-icon
-        ></span>
-        <div class="formbox login">
-          <h1>Login</h1>
-          <form action="">
-            <div class="input">
-              <span class="icon">
-                <ion-icon name="person-outline"></ion-icon>
-              </span>
-              <input type="text" name="username" id="username" required />
-              <label for="username">Username</label>
-            </div>
-            <div class="input">
-              <span class="icon">
-                <ion-icon
-                  title="show password?"
-                  class="eyes"
-                  name="eye-outline"
-                  id="eye"
-                  onclick="{showPassword(event)}"
-                  aria-hidden="true"
-                ></ion-icon>
-              </span>
-              <input
-                type="password"
-                name="password"
-                id="password-login"
-                required
-              />
-              <label for="password">Password</label>
-            </div>
-
-            <div class="remember-forgot">
-              <label for="remember"
-                ><input type="checkbox" id="remember" />Remember Me</label
-              >
-              <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn" name="login">Login</button>
-            <div class="login-register">
-              <p>
-                Dont Have Account?<a
-                  href="#"
-                  class="register-link"
-                  onclick="{change(event)}"
-                  >Register</a
-                >
-              </p>
-            </div>
-          </form>
-        </div>
-
-        <div class="formbox register">
-          <h2>Registration</h2>
-          <form action="">
-            <div class="input">
-              <span class="icon">
-                <ion-icon name="person-outline"></ion-icon>
-              </span>
-              <input type="text" name="username" required />
-              <label for="">Username</label>
-            </div>
-            <div class="input">
-              <span class="icon">
-                <i name="show password"
-                  ><ion-icon
-                    title="show password?"
-                    class="eyes"
-                    name="eye-outline"
-                    id="eye"
-                    onclick="{showPassword(event)}"
-                    aria-hidden="true"
-                  ></ion-icon
-                ></i>
-              </span>
-              <input
-                type="password"
-                name="password"
-                id="password-regis"
-                required
-              />
-              <label for="">Password</label>
-            </div>
-            <div class="remember-forgot">
-              <label for=""
-                ><input type="checkbox" />I agree to the terms &
-                conditions</label
-              >
-            </div>
-            <button type="submit" class="btn" name="save_user">Register</button>
-            <div class="login-register">
-              <p>
-                Already have an account?<a
-                  href="#"
-                  class="login-link"
-                  onclick="{change(event)}"
-                  >Login</a
-                >
-              </p>
-            </div>
-          </form>
+      <!-- Overlay Section -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Hello<br>Friends</h1>
+            <p>If you have an account, login here and have fun</p>
+            <button class="ghost" id="login">Login <i class="lni lni-arrow-left"></i></button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">Start Your<br>Journey Now</h1>
+            <p>If you don’t have an account, register now and join us</p>
+            <button class="ghost" id="register">Register <i class="lni lni-arrow-right"></i></button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <script src="script.js"></script>
-
-    <!-- Ion Icon -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
