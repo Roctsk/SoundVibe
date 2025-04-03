@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: cursive;
-    background: linear-gradient(to bottom, #191919, darkseagreen, #2E8B57, #191919);
+    background-color: darkseagreen;
     height: 100vh; 
 }
 
