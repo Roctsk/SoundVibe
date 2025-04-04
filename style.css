@@ -139,10 +139,46 @@ a[href="#reviews"] {
   gap: 200px;
 }
 
-.topss{
-    transform: scale(0.7)
-    scaleX(1.4);
+.topss {
+  position: relative;
+  width: 550px;
+  height: 450px;
+  border-radius: 15%;
+  overflow: hidden;
 }
+
+.topss img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.image-caption h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.image-caption p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.bx {
+  position: absolute;
+  bottom: 15px;
+  left: 400px;
+  color: white;
+  font-size: 70px; 
+}
+
 
 .figma_ideas{
   font-size: 30px;
@@ -185,10 +221,6 @@ a[href="#reviews"] {
 .dfrtdrtg{
   background-color: #191919;
 }
-
-
-
-
 
 
 
