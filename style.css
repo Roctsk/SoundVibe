@@ -1,13 +1,17 @@
 body {
     margin: 0;
     font-family: cursive;
-    background-color: darkseagreen;
+    background-image:url("img/bamain2.jpg");
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
     height: 100vh; 
 }
 
 .header {
     border-top: 2px solid #fff;
-    background-color: #191919;
+    background-color: black;
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     display: flex;
@@ -58,7 +62,7 @@ a[href="#reviews"] {
 
 
 .teg_p {
-    background-color: darkseagreen;
+    background-color: #2E8B57;
     color: white;
     border-radius: 25px;
     padding: 8px 20px;
@@ -68,7 +72,7 @@ a[href="#reviews"] {
 }
 
 .teg_p:hover {
-    background-color:  #2E8B57;
+    background-color:  darkseagreen;
 }
 
 
@@ -136,7 +140,8 @@ a[href="#reviews"] {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  gap: 200px;
+  gap: 500px;
+  margin-bottom: 450px;
 }
 
 .topss {
@@ -171,14 +176,6 @@ a[href="#reviews"] {
   font-size: 20px;
 }
 
-.bx {
-  position: absolute;
-  bottom: 15px;
-  left: 400px;
-  color: white;
-  font-size: 70px; 
-}
-
 
 .figma_ideas{
   font-size: 30px;
@@ -189,18 +186,60 @@ a[href="#reviews"] {
   font-size: 40px;
 }
 
-.premium_div{
-  padding: 15px;
+.divprem{
+  display: flex;
+}
+.premium_div, .premium_div1 {
+  padding: 15px 30px;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: linear-gradient(to right, #2E8B80, #2E8B57); 
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.premium_div1{
-  padding: 15px;
-  border-radius: 30px;
-  font-size: 20px;
+
+.premium_div:hover, .premium_div1:hover {
+  background: linear-gradient(to right, #2E8B57, #2E8B80); 
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.premium_div svg, .premium_div1 svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  transition: all 0.3s ease;
+}
+
+.premium_div:hover svg polygon {
+  fill: #FFD700;
+}
+
+.premium_div:hover svg, .premium_div1:hover svg {
+  fill: #FFD700;
+}
+
+.premium_div span, .premium_div1 span {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.premium_div1 {
   margin-left: 50px;
 }
+
 
 .gradient-text{
   background: linear-gradient(to right, #2E8B80, #2E8B57);
@@ -210,30 +249,215 @@ a[href="#reviews"] {
   font-size: 75px;
 }
 
-.gradient-text2{
-  background: linear-gradient(to right, #2E8B80, #2E8B57);
+
+.power-music{
+  text-align: center;
+  justify-content: center;
+}
+
+.power-music h1{
+  background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  font-size: 60px;
+}
+
+
+.play-icon{
+  background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mini-music{
+  background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  margin-right: 15px;
+}
+.teggs-p{
+  font-size: 20px;
+  color:#D3D3D3;
+ }
+
+ .since-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: gray;
+  gap: 10px;
+}
+
+.since-music i {
   font-size: 20px;
 }
+.conteiner-gens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 45px;
+}
 
-.dfrtdrtg{
-  background-color: #191919;
+.conteiner {
+  background-color: #222222;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 15px;
+  width: 320px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.conteiner:hover{
+  background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
+  transform: scale(1.05);
+}
+
+.conteiner:hover h1 {
+  color:  #FFFFF0; 
+}
+
+.conteiner:hover .play-icon {
+  background:black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.conteiner p {
+  margin-top: 10px; 
+  margin-bottom: 40px;
+  padding: 0;         
+}
+
+.conteiner i {
+  font-size: 60px;
+  margin-bottom: 10px;
+  align-self: flex-start; 
 }
 
 
 
+.music_play{
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 80px;
+}
+
+.milion-hits {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.billion-hits {
+  display: flex;
+  gap: 20px;
+}
+
+.billion-hits p {
+  background-color: #222222;
+  padding: 15px;
+  color: gray;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.conteiner-genses{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.conteiners img{
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.conteiners{
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  width: 600px;
+}
 
 
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vidstyp{
+  margin-top: 150px;
+}
+
+.vidstyp-2{
+  margin-top: 170px;
+}
+
+.conteiner-genss{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+
+}
 
 
+.conteinerss{
+  background-color: red;
+  margin-top: 30px;
+  width: 300px;
+  height: 5%;
+}
+
+.conteinerss img{
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.premium_divs{
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-left: 950px;
+  margin-top: 20px;
+}
+
+.black{
+  background-color: black;
+  color: white;
+  box-shadow: 0 -50px 150px -50px black;
+}
 
 
+.colornytu{
+  background-color: black;
+  color: #fff;
+}
 
+.main{
+  background-color: black;
+}
 
-
-
+.premium_divs{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
 
 
 
