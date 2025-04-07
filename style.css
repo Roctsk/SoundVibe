@@ -150,18 +150,83 @@ a[href="#reviews"] {
   height: 450px;
   border-radius: 15%;
   overflow: hidden;
+  transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
 }
 
 .topss img {
   width: 100%;
   height: auto;
   border-radius: 5%;
+  transition: filter 0.4s ease;
+}
+
+.topss::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15%;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.topss:hover {
+  transform: scale(1.05);
+}
+
+.topss:hover img {
+  filter: brightness(1.2);
+}
+
+.topss:hover::after {
+  background: rgba(0, 0, 0, 0); 
+}
+
+.topss .content-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+
+.topss:hover .content-wrapper {
+  transform: translateY(-20px);
+}
+
+.topss i {
+  position: relative;
+  color: #fff;
+  font-size: 65px;
+  transition: transform 0.4s ease;
+  z-index: 2;
+  left: 80%;
 }
 
 .image-caption {
+  color: white;
+  z-index: 2;
+}
+
+.topss .content-wrapper,
+.topss i,
+.image-caption {
+  will-change: transform;
+}
+
+
+
+.image-caption {
   position: absolute;
-  bottom: 15px;
-  left: 50px;
+  bottom: 5px;
+  left: 25px;
   color: white;
   font-size: 16px;
 }
@@ -441,7 +506,7 @@ a[href="#reviews"] {
 .black{
   background-color: black;
   color: white;
-  box-shadow: 0 -50px 150px -50px black;
+  box-shadow: 0 -150px 70px  black;
 }
 
 
