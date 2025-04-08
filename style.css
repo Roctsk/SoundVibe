@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: cursive;
@@ -151,11 +155,24 @@ a[href="#reviews"] {
   border-radius: 15%;
   overflow: hidden;
   transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
+  animation: slideInTop 1.4s ease-out;
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateX(25%);
+    opacity: 0;       
+  }
+  100% {
+    transform: translateX(0);     
+    opacity: 1;       
+  }
 }
 
 .topss img {
   width: 100%;
   height: auto;
+  transform: translateY(-50px); 
   border-radius: 5%;
   transition: filter 0.4s ease;
 }
@@ -173,16 +190,19 @@ a[href="#reviews"] {
   transition: background 0.4s ease;
 }
 
-.topss:hover {
+.topss:hover,
+.topss.active {
   transform: scale(1.05);
 }
 
-.topss:hover img {
+.topss:hover img,
+.topss.active img {
   filter: brightness(1.2);
 }
 
-.topss:hover::after {
-  background: rgba(0, 0, 0, 0); 
+.topss:hover::after,
+.topss.active::after {
+  background: rgba(0, 0, 0, 0);
 }
 
 .topss .content-wrapper {
@@ -197,7 +217,8 @@ a[href="#reviews"] {
 }
 
 
-.topss:hover .content-wrapper {
+.topss:hover .content-wrapper,
+.topss.active .content-wrapper {
   transform: translateY(-20px);
 }
 
@@ -253,6 +274,18 @@ a[href="#reviews"] {
 
 .divprem{
   display: flex;
+  animation: slideInImg 1.4s ease-out;
+}
+
+@keyframes slideInImg {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;       
+  }
+  100% {
+    transform: scale(0.98);     
+    opacity: 1;       
+  }
 }
 .premium_div, .premium_div1 {
   padding: 15px 30px;
@@ -312,6 +345,16 @@ a[href="#reviews"] {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-size: 75px;
+  animation: slideIns 3.12s ease-out;
+}
+
+@keyframes slideIns {
+  0% {
+    opacity: 0;       
+  }
+  100% {   
+    opacity: 1;       
+  }
 }
 
 
@@ -321,12 +364,25 @@ a[href="#reviews"] {
 }
 
 .power-music h1{
+  position: relative;
   background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 60px;
 }
-
+.power-music h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  bottom: 25px; 
+  margin-top: 10px; 
+  width: 15%;
+  height: 4px;
+  background: linear-gradient(to right, #2E8B80, #2E8B57, darkseagreen);
+  border-radius: 2px;
+}
 
 .play-icon{
   background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
@@ -341,6 +397,16 @@ a[href="#reviews"] {
   font-size: 32px;
   margin-right: 15px;
 }
+
+.treding{
+  background: linear-gradient(to right, #2E8B80, #2E8B57,darkseagreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+
 .teggs-p{
   font-size: 20px;
   color:#D3D3D3;
