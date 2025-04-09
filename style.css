@@ -500,33 +500,54 @@ a[href="#reviews"] {
   font-weight: bold;
 }
 
+
+
+
 .conteiner-genses{
   display: flex;
   text-align: center;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 .conteiners img{
-  height: 200px;
-  width: auto;
+  height: 250px;
+  width: 300px;
+  border-radius: 8%;
+  margin-top: 20px;
+  margin-left: 20px;
   object-fit: cover;
-  padding: 20px;
 }
 
 .conteiners{
   display: flex;
   flex-direction: row;
-  background-color: red;
-  width: 600px;
+  background:#30003e;
+  width: 760px;
+  height: 300px;
+  gap: 20px;
+
+  border-radius: 5%;
 }
+
 
 
 .text-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  padding: 0; 
+  margin: 0;
 }
+
+.text-content h1,
+.text-content p {
+  margin: 10px;
+  padding: 1px;
+}
+
+
+
 
 .vidstyp{
   margin-top: 150px;
@@ -541,25 +562,50 @@ a[href="#reviews"] {
   flex-direction: row;
   text-align: center;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
   margin-top: 50px;
+}
+
+.conteiner-genss .H1,.p{
+  display: flex;
+  justify-content:flex-start;
 
 }
+
 
 
 .conteinerss{
-  background-color: red;
+  background-color: #000080;
   margin-top: 30px;
-  width: 300px;
-  height: 5%;
+  width: 350px;
+  height: 500px;
+  border-radius: 5%;
+
 }
 
 .conteinerss img{
-  height: 200px;
-  width: auto;
+  margin-top: 10px;
+  height: 300px;
+  width:300px ;
   object-fit: cover;
   padding: 10px;
+  border-radius: 10%;
 }
+
+.text-coordinata{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-coordinata h1,
+.text-coordinata p {
+  margin: 10px;
+  padding: 1px;
+  justify-content: flex-start;
+}
+
+
 
 .premium_divs{
   padding: 15px;
@@ -588,7 +634,52 @@ a[href="#reviews"] {
 .premium_divs{
   margin-bottom: 50px;
   margin-top: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: linear-gradient(to right, #2E8B80, #2E8B57); 
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+.premium_divs:hover {
+  background: linear-gradient(to right, #2E8B57, #2E8B80); 
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.premium_divs svg{
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s ease;
+}
+
+.premium_divs:hover svg polygon {
+  fill: #FFD700;
+}
+
+.premium_divs:hover svg {
+  fill: #FFD700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
