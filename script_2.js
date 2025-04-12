@@ -1,4 +1,5 @@
 const playCircle1 = document.getElementById('play-circle1');
+const playCircle22 = document.getElementById('play-circle22');
 const playCircle2 = document.getElementById('play-circle2');
 const playCircle3= document.getElementById('play-circle3');
 const playCircle4 = document.getElementById('play-circle4');
@@ -8,6 +9,7 @@ const playCircle6 = document.getElementById('play-circle6');
 const toppss = document.getElementById('topss');    
 
 const audio1 = document.getElementById('audio1'); 
+const audio22 = document.getElementById('audio22'); 
 const audio2 = document.getElementById('audio2'); 
 const audio3 = document.getElementById('audio3'); 
 const audio4 = document.getElementById('audio4'); 
@@ -16,20 +18,38 @@ const audio6 = document.getElementById('audio6');
 
 let IsMusicPlaying = false; 
 
+playCircle22.addEventListener('click', () => {
+  if (!IsMusicPlaying) {
+    audio22.play();                         
+    toppss.classList.add('active');  
+    playCircle22.classList.remove('bx-play-circle'); 
+    playCircle22.classList.add('bx-pause-circle');
+    playCircle22.style.fontSize = "70px";
+    IsMusicPlaying = true;
+  } else {
+    audio22.pause();                    
+    toppss.classList.remove('active');    
+    playCircle22.classList.remove('bx-pause-circle');
+    playCircle22.classList.add('bx-play-circle');
+    playCircle22.style.fontSize = "70px";
+    IsMusicPlaying = false;
+  }
+});
+
 playCircle1.addEventListener('click', () => {
   if (!IsMusicPlaying) {
     audio1.play();                         
     toppss.classList.add('active');  
     playCircle1.classList.remove('bx-play-circle'); 
     playCircle1.classList.add('bx-pause-circle');
-    playCircle1.style.fontSize = "70px";
+    playCircle3.style.fontSize = "70px";
     IsMusicPlaying = true;
   } else {
     audio1.pause();                    
     toppss.classList.remove('active');    
     playCircle1.classList.remove('bx-pause-circle');
     playCircle1.classList.add('bx-play-circle');
-    playCircle1.style.fontSize = "70px";
+    playCircle3.style.fontSize = "70px";
     IsMusicPlaying = false;
   }
 });
@@ -40,14 +60,14 @@ playCircle2.addEventListener('click', () => {
     toppss.classList.add('active');  
     playCircle2.classList.remove('bx-play-circle'); 
     playCircle2.classList.add('bx-pause-circle');
-    playCircle2.style.fontSize = "70px";
+    playCircle3.style.fontSize = "70px";
     IsMusicPlaying = true;
   } else {
     audio2.pause();                    
     toppss.classList.remove('active');    
     playCircle2.classList.remove('bx-pause-circle');
     playCircle2.classList.add('bx-play-circle');
-    playCircle2.style.fontSize = "70px";
+    playCircle3.style.fontSize = "70px";
     IsMusicPlaying = false;
   }
 });
@@ -127,5 +147,3 @@ playCircle6.addEventListener('click', () => {
     IsMusicPlaying = false;
   }
 });
-
-
