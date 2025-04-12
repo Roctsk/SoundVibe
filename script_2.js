@@ -22,14 +22,14 @@ playCircle1.addEventListener('click', () => {
     toppss.classList.add('active');  
     playCircle1.classList.remove('bx-play-circle'); 
     playCircle1.classList.add('bx-pause-circle');
-    playCircle3.style.fontSize = "70px";
+    playCircle1.style.fontSize = "70px";
     IsMusicPlaying = true;
   } else {
     audio1.pause();                    
     toppss.classList.remove('active');    
     playCircle1.classList.remove('bx-pause-circle');
     playCircle1.classList.add('bx-play-circle');
-    playCircle3.style.fontSize = "70px";
+    playCircle1.style.fontSize = "70px";
     IsMusicPlaying = false;
   }
 });
@@ -40,14 +40,14 @@ playCircle2.addEventListener('click', () => {
     toppss.classList.add('active');  
     playCircle2.classList.remove('bx-play-circle'); 
     playCircle2.classList.add('bx-pause-circle');
-    playCircle3.style.fontSize = "70px";
+    playCircle2.style.fontSize = "70px";
     IsMusicPlaying = true;
   } else {
     audio2.pause();                    
     toppss.classList.remove('active');    
     playCircle2.classList.remove('bx-pause-circle');
     playCircle2.classList.add('bx-play-circle');
-    playCircle3.style.fontSize = "70px";
+    playCircle2.style.fontSize = "70px";
     IsMusicPlaying = false;
   }
 });
@@ -127,3 +127,5 @@ playCircle6.addEventListener('click', () => {
     IsMusicPlaying = false;
   }
 });
+
+
