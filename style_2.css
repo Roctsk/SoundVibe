@@ -280,3 +280,41 @@ input {
     background-color: darkseagreen;
     color: white;
 }
+
+
+
+
+@media (max-width: 320px) {
+    .social-container{
+        display: none;
+    }
+    .pass-link{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .social-container{
+        display: none;
+    }
+    .pass-link{
+        display: none;
+    }
+}
+  
+@media (max-width: 425px) {
+    .social-container{
+        display: none;
+    }
+    .pass-link{
+        display: none;
+    }
+    button.ghost {
+        font-size: 12px;  
+        padding: 12px 30px;   
+    }
+    button {
+        font-size: 12px;  
+        padding: 12px 30px;   
+    }
+}
